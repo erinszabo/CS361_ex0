@@ -6,9 +6,19 @@ class Driver:
         self.li = line
     
     # getters for each trait
+    def get_name(self):
+        return self.na
+    
+    def get_num(self):
+        return self.nu
 
-    # setter for line, so I can add " YEET!" later if name == Lewis Hamilton
+    def get_line(self):
+        return self.li
 
+    # setter for line, so I can add " YEET!" if name == Lewis Hamilton
+    def check(self):
+        if self.na == "Lewis Hamilton":
+            self.li = self.li + " YEET!"
 
 
 
