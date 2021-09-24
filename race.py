@@ -34,7 +34,13 @@ def get_info():
         line = file.readline()  # the whole line is the "line"
         # split the line by the spaces
         parts = line.split()
-        name = str(parts[0]) + " " + str(parts[1])  # first 2 words are the "name" of the driver
+        
+        ### name = str(parts[0]) + " " + str(parts[1])  # first 2 words are the "name" of the driver
+        ### ^ DELETE ME ^
+
+        # easier to use just the last name
+        name = str(parts[1]) # second word is last name
+        
         num = parts[2]  # 3rd is the "number"
 
         ### TEST ###
@@ -55,7 +61,8 @@ def get_info():
 
 # sorts drivers array in alphabetical order by last name
 def name_sort(arr):
-    return
+    arr.sort(key=lambda x: x.na)
+    return arr
 
 # sorts drivers array by number
 def num_sort(arr):
@@ -70,6 +77,7 @@ def display(d_array):
     print("===============")
     for driver in d_array:
         print(driver.get_line(), end = '') # no new line
-        # print(driver.get_num()) # no new line
+        # print(driver.get_num()) 
+        # print(driver.get_name())
 
     return 

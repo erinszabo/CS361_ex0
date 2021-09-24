@@ -7,7 +7,7 @@ if __name__ == '__main__':
     
     r.display(drivers)  # FOR TESTING, DELETE LATER
 
-    # sort by name
+    drivers = r.name_sort(drivers)  # sort by name
     r.display(drivers) 
 
     drivers = r.num_sort(drivers)  # sort by number
