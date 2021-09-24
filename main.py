@@ -3,7 +3,9 @@ import race as r
 
 
 if __name__ == '__main__':
-    print("2021 F1 Drivers")
-    print("===============")
-    r.get_info()
+    drivers = r.get_info()
+    # sort by name
+    r.display(drivers) # display
+    # sort by number
+    # display
 

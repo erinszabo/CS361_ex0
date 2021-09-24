@@ -53,7 +53,7 @@ def get_info():
 
     return drivers
 
-# sorts drivers array by name
+# sorts drivers array in alphabetical order by last name
 def name_sort():
     return
 
@@ -63,12 +63,16 @@ def num_sort():
 
 # asks user if drivers should be sorted by name or number, 
 # then calls the required sort
-def choice():
-    # prompt user
+def sort_choice():
+    choice = input("")# prompt user
+    ### this function isn't needed, but keeping for later ###
     return  
 
 # prints the sorted list of drivers
 def display(d_array):
-    # print(driver, end = '') # no new line
+    print("2021 F1 Drivers")
+    print("===============")
+    for driver in d_array:
+        print(driver.get_line(), end = '') # no new line
 
     return 
