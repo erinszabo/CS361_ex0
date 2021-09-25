@@ -4,7 +4,12 @@ class Driver:
     def __init__(self, name, number, line):
         self.na = name
         self.nu = number
-        self.li = line
+        # add " YEET!" if driver name is Lewis Hamilton
+        if "Hamilton" in name:
+            self.li = line[:len(line)-1] + " YEET!\n"
+            # ^remove \n after line, add it after yeet^
+        else:
+            self.li = line 
     
     # getters for each trait
     def get_name(self):
@@ -13,13 +18,8 @@ class Driver:
     def get_num(self):
         return self.nu
 
-    def get_line(self):
+    def get_line(self):       
         return self.li
-
-    # setter for line, so I can add " YEET!" if driver name is Lewis Hamilton
-    def check(self):
-        if self.na == "Hamilton":
-            self.li = self.li + " YEET!"
 
 
 # get info from file to create driver objects
